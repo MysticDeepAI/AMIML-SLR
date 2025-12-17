@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Model-agnostic methods — Local/Global</title>
+  <style>
+    :root{
+      --bg:#0b0c10;
+      --panel:#11131a;
+      --card:#151827;
+      --card2:#101324;
+      --text:#e9ecff;
+      --muted:#aab0d6;
+      --stroke:#2a2f4a;
+      --accent:#8aa4ff;
+      --shadow: 0 10px 24px rgba(0,0,0,.35);
+      --r:14px;
+      --pad:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(138,164,255,.18), transparent 55%),
+                  radial-gradient(900px 500px at 80% 30%, rgba(120,255,207,.10), transparent 50%),
+                  var(--bg);
+      color:var(--text);
+    }
+    header{
+      padding:18px 18px 8px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .title{
+      display:flex; flex-direction:column; gap:4px;
+    }
+    h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+      font-weight:700;
+    }
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.3;
+    }
+    .toolbar{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    }
+    .search{
+      width:min(420px, 78vw);
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--stroke);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      outline:none;
+    }
+    .pill{
+      border:1px solid var(--stroke);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      padding:9px 12px;
+      border-radius:999px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .pill[aria-pressed="true"]{
+      border-color: rgba(138,164,255,.65);
+      box-shadow: 0 0 0 3px rgba(138,164,255,.15) inset;
+    }
+
+    /* Diagram */
+    .wrap{
+      padding: 10px 18px 22px;
+    }
+    .diagram{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--stroke);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 14px;
+      overflow:auto;
+    }
+    .row{
+      display:flex;
+      gap:14px;
+      min-width: 980px; /* fuerza horizontal */
+      align-items:flex-start;
+    }
+    .col{
+      width: 320px;
+      min-width: 320px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .col.small{ width: 260px; min-width:260px; }
+    .col.wide{ width: 420px; min-width:420px; }
+
+    .colhead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color: var(--muted);
+      font-size:12px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      padding: 6px 6px 2px;
+    }
+    .arrow{
+      color: rgba(138,164,255,.7);
+      font-size: 18px;
+      padding: 6px 2px 0;
+      user-select:none;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border: 1px solid var(--stroke);
+      border-radius: var(--r);
+      padding: var(--pad);
+      box-shadow: 0 8px 18px rgba(0,0,0,.22);
+    }
+    .card.root{
+      background: linear-gradient(180deg, rgba(138,164,255,.18), rgba(255,255,255,.03));
+      border-color: rgba(138,164,255,.35);
+    }
+    .label{
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing:.2px;
+      margin:0 0 6px;
+    }
+    .desc{
+      margin:0;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height:1.35;
+    }
+    .btn{
+      width:100%;
+      text-align:left;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      padding: 12px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+      transition: transform .06s ease, border-color .12s ease, background .12s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(138,164,255,.45); }
+    .btn[aria-selected="true"]{
+      border-color: rgba(138,164,255,.75);
+      background: rgba(138,164,255,.10);
+      box-shadow: 0 0 0 3px rgba(138,164,255,.12) inset;
+    }
+    .btn .meta{
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+    .btn .right{
+      color: rgba(138,164,255,.9);
+      font-weight: 800;
+      user-select:none;
+    }
+
+    .stack{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .variants{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .vgroup{
+      border:1px dashed rgba(170,176,214,.35);
+      border-radius: 14px;
+      padding: 10px 10px;
+      background: rgba(0,0,0,.12);
+    }
+    .vtitle{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      margin:0 0 8px;
+      font-weight:800;
+      font-size: 12.5px;
+      color: var(--text);
+    }
+    .vchips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .chip{
+      border:1px solid rgba(170,176,214,.30);
+      background: rgba(255,255,255,.03);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--text);
+      max-width: 100%;
+    }
+    .crumbs{
+      color: var(--muted);
+      font-size: 12.5px;
+      padding: 4px 6px 0;
+    }
+    .hint{
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height:1.4;
+      padding: 10px 12px;
+      border:1px solid rgba(170,176,214,.22);
+      background: rgba(255,255,255,.03);
+      border-radius: 14px;
+    }
+    footer{
+      padding: 0 18px 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    a{ color: var(--accent); }
+  </style>
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>Model-agnostic interpretability methods</h1>
+    <p class="subtitle">Diagrama horizontal interactivo (Local/Global → métodos → variantes). Edita el bloque <code>DATA</code> para agregar/quitar cosas.</p>
+  </div>
+  <div class="toolbar">
+    <input id="q" class="search" placeholder="Buscar método o variante… (ej: LIME, PDP, CAGE, ICE)" />
+    <button id="toggleLocal" class="pill" aria-pressed="true">Local</button>
+    <button id="toggleGlobal" class="pill" aria-pressed="false">Global</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="diagram" role="application" aria-label="Diagrama horizontal de métodos agnósticos">
+    <div class="row">
+      <!-- Col 1: Root -->
+      <div class="col small">
+        <div class="colhead">Inicio</div>
+        <div class="card root">
+          <p class="label">Model-agnostic method</p>
+          <p class="desc">Post-hoc, query access a <em>f<sub>b</sub></em> → produce un artefacto interpretable <em>e</em> bajo un contexto κ.</p>
+        </div>
+        <div class="crumbs" id="crumbs"></div>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <!-- Col 2: Scope -->
+      <div class="col small">
+        <div class="colhead">Alcance</div>
+        <div class="stack" id="scopeCol"></div>
+        <div class="hint">
+          Tip: primero elige <b>Local</b> o <b>Global</b>, luego un método, y verás variantes a la derecha.
+        </div>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <!-- Col 3: Methods -->
+      <div class="col">
+        <div class="colhead">Métodos</div>
+        <div class="stack" id="methodsCol"></div>
+      </div>
+
+      <div class="arrow">→</div>
+
+      <!-- Col 4: Variants -->
+      <div class="col wide">
+        <div class="colhead">Variantes</div>
+        <div class="variants" id="variantsCol"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Si quieres “dejarlo en la web”: sube este <code>index.html</code> a un repo y activa GitHub Pages, o arrástralo a Netlify/Vercel.
+</footer>
+
+<script>
+/**
+ * ====== EDITA AQUÍ ======
+ * Estructura:
+ * scopes: { id, label, methods: [ { id, label, note, variants: [ ... ] } ] }
+ * variants pueden ser strings o grupos { group, items:[...] }.
+ */
+const DATA = {
+  root: { id:"agn", label:"Model-agnostic method" },
+  scopes: [
+    {
+      id: "local",
+      label: "Local",
+      note: "Explican una instancia xₙ (por qué f_b(xₙ)).",
+      methods: [
+        {
+          id:"lime",
+          label:"LIME",
+          note:"Surrogate local (g) con pesos π_x y penalización Ω.",
+          variants: [
+            { group:"Surrogate structure (G)", items:["LIMEtree","Anchors","LIMASE","KLFDS"] },
+            { group:"Neighborhood design (Qₓ, πₓ, 𝒵)", items:["GLIME (sampling-weighted)","MeLIME (distribution-aware)","ALIME (autoencoder metric)","VAE–SLIME (seed-invariant)","S–LIME (sampling law)"] },
+            { group:"Stability / priors (Ω)", items:["BayLIME","GLIME (anchored ElasticNet)","S–LIME (stability-controlled selection)"] },
+            { group:"Other", items:["normLIME","DSEG–LIME"] }
+          ]
+        },
+        {
+          id:"shap_local",
+          label:"SHAP (local) / Shapley attributions",
+          note:"Valores de Shapley con v_x(S) (marginal/condicional/do).",
+          variants: [
+            "Marginal SHAP",
+            "Conditional SHAP",
+            "Causal Shapley Values",
+            "Asymmetric Shapley Values (ASV)",
+            "On-manifold / removal-based frameworks (familias relacionadas)"
+          ]
+        },
+        {
+          id:"counterfactuals",
+          label:"Counterfactual explanations",
+          note:"Muestra cambios factibles que alteran la predicción.",
+          variants: [
+            { group:"Nearest-perturbation / local search", items:["SEDC","SEDC-T","MACEM (PN/PP)","LORE","LORE_sa","LENS"] },
+            { group:"Diverse CF sets", items:["CERTIFAI","MOC (NSGA-II / Pareto set)"] },
+            { group:"Other proposals", items:["FACE (graph manifold)","MINT (SCM recourse)"] }
+          ]
+        },
+        {
+          id:"ice",
+          label:"ICE (Individual Conditional Expectation)",
+          note:"Curvas por instancia; PDP es el promedio de ICE.",
+          variants: [
+            { group:"Core", items:["ICE","c-ICE (centered)","d-ICE (derivative)","clusterICE"] },
+            { group:"Summaries & constrained variants", items:["ICE feature impact","IDFI (in-distribution)","Heterogeneity summary","Non-linearity summary","SpICE (spatial ICE)"] }
+          ]
+        }
+      ]
+    },
+    {
+      id: "global",
+      label: "Global",
+      note: "Resumen sobre D o un subconjunto S amplio.",
+      methods: [
+        {
+          id:"pdp",
+          label:"PDP (Partial Dependence Plot)",
+          note:"E_{X_C}[f_b(x_S, X_C)] (riesgo de extrapolación si hay dependencia).",
+          variants: [
+            { group:"Dependence-aware / on-manifold", items:["cs-PDP","StratPD"] },
+            { group:"Dynamic / drift", items:["iPDP (EMA updates)"] },
+            { group:"Causal", items:["CDPs (do-interventions)"] }
+          ]
+        },
+        {
+          id:"ale",
+          label:"ALE (Accumulated Local Effects)",
+          note:"Agrega efectos locales condicionados; reduce OOD vs PDP.",
+          variants: [
+            { group:"Summaries", items:["ALER / ALED","NALER / NALED","Bootstrap uncertainty (data-only / model+data)"] },
+            { group:"Robust / heterogeneity-aware", items:["RHALE"] },
+            { group:"Scalable aggregation", items:["DALE (Jacobian-based)"] }
+          ]
+        },
+        {
+          id:"mr",
+          label:"Model Reliance / Permutation Importance (PFI)",
+          note:"Riesgo con feature “roto” vs original (rompe dependencias).",
+          variants: [
+            "Sobol–CPI (conditional; doubly robust)",
+            "cARFi (ARF density → conditional sampling)"
+          ]
+        },
+        {
+          id:"sage",
+          label:"SAGE (global Shapley over loss)",
+          note:"Valores Shapley sobre mejora de riesgo en dataset.",
+          variants: [
+            "Conditional imputation (v_f basado en pérdida)",
+            "Estimación por muestreo / aproximaciones (según implementación)"
+          ]
+        },
+        {
+          id:"cage",
+          label:"CAGE (global causal Shapley over loss)",
+          note:"Global + sampling causal (post-interventional do-distributions).",
+          variants: [
+            "Causal sampling policy (do-distributions)",
+            "Comparación con SAGE / SHAP según v_f"
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+// ====== Render ======
+const scopeCol = document.getElementById("scopeCol");
+const methodsCol = document.getElementById("methodsCol");
+const variantsCol = document.getElementById("variantsCol");
+const crumbs = document.getElementById("crumbs");
+const q = document.getElementById("q");
+
+const toggleLocal = document.getElementById("toggleLocal");
+const toggleGlobal = document.getElementById("toggleGlobal");
+
+let state = {
+  scopeId: "local",
+  methodId: null,
+  query: ""
+};
+
+function setCrumbs(){
+  const scope = DATA.scopes.find(s=>s.id===state.scopeId);
+  const method = scope?.methods.find(m=>m.id===state.methodId);
+  const parts = ["Model-agnostic methods", scope?.label || "—"];
+  if(method) parts.push(method.label);
+  crumbs.textContent = parts.join("  →  ");
+}
+
+function buttonEl({label, meta, selected, onClick}){
+  const btn = document.createElement("button");
+  btn.className = "btn";
+  btn.setAttribute("aria-selected", selected ? "true" : "false");
+  btn.addEventListener("click", onClick);
+
+  const left = document.createElement("div");
+  const p1 = document.createElement("div");
+  p1.style.fontWeight = "800";
+  p1.textContent = label;
+  left.appendChild(p1);
+
+  if(meta){
+    const p2 = document.createElement("div");
+    p2.className = "meta";
+    p2.textContent = meta;
+    left.appendChild(p2);
+  }
+
+  const right = document.createElement("div");
+  right.className = "right";
+  right.textContent = "›";
+
+  btn.appendChild(left);
+  btn.appendChild(right);
+  return btn;
+}
+
+function matchesQuery(text){
+  const qq = state.query.trim().toLowerCase();
+  if(!qq) return true;
+  return (text || "").toLowerCase().includes(qq);
+}
+
+function renderScopes(){
+  scopeCol.innerHTML = "";
+  DATA.scopes.forEach(s=>{
+    const selected = s.id === state.scopeId;
+    const btn = buttonEl({
+      label: s.label,
+      meta: s.note,
+      selected,
+      onClick: ()=>{
+        state.scopeId = s.id;
+        state.methodId = null;
+        syncToggles();
+        renderAll();
+      }
+    });
+    scopeCol.appendChild(btn);
+  });
+}
+
+function flattenVariants(variants){
+  // Para búsqueda: extrae strings de grupos
+  const out = [];
+  (variants||[]).forEach(v=>{
+    if(typeof v === "string") out.push(v);
+    else if(v && typeof v === "object" && Array.isArray(v.items)){
+      out.push(v.group || "");
+      v.items.forEach(x=>out.push(x));
+    }
+  });
+  return out.join(" | ");
+}
+
+function renderMethods(){
+  methodsCol.innerHTML = "";
+  const scope = DATA.scopes.find(s=>s.id===state.scopeId);
+  if(!scope) return;
+
+  const filtered = scope.methods.filter(m=>{
+    const hay = `${m.label} | ${m.note||""} | ${flattenVariants(m.variants)}`;
+    return matchesQuery(hay);
+  });
+
+  if(filtered.length === 0){
+    const empty = document.createElement("div");
+    empty.className = "hint";
+    empty.textContent = "No hay resultados con ese filtro.";
+    methodsCol.appendChild(empty);
+    return;
+  }
+
+  filtered.forEach(m=>{
+    const selected = m.id === state.methodId;
+    const btn = buttonEl({
+      label: m.label,
+      meta: m.note,
+      selected,
+      onClick: ()=>{
+        state.methodId = (state.methodId === m.id) ? null : m.id;
+        renderVariants();
+        setCrumbs();
+        // re-render selected state
+        renderMethods();
+      }
+    });
+    methodsCol.appendChild(btn);
+  });
+}
+
+function renderVariants(){
+  variantsCol.innerHTML = "";
+  const scope = DATA.scopes.find(s=>s.id===state.scopeId);
+  const method = scope?.methods.find(m=>m.id===state.methodId);
+
+  if(!method){
+    const placeholder = document.createElement("div");
+    placeholder.className = "hint";
+    placeholder.innerHTML = "Selecciona un método para ver sus variantes.";
+    variantsCol.appendChild(placeholder);
+    return;
+  }
+
+  const title = document.createElement("div");
+  title.className = "card";
+  title.innerHTML = `<div class="label">${method.label}</div><div class="desc">${method.note||""}</div>`;
+  variantsCol.appendChild(title);
+
+  (method.variants||[]).forEach(v=>{
+    if(typeof v === "string"){
+      const g = document.createElement("div");
+      g.className = "vgroup";
+      g.innerHTML = `<div class="vtitle">${v}</div>`;
+      variantsCol.appendChild(g);
+      return;
+    }
+    const group = document.createElement("div");
+    group.className = "vgroup";
+
+    const head = document.createElement("div");
+    head.className = "vtitle";
+    head.textContent = v.group || "Variants";
+    group.appendChild(head);
+
+    const chips = document.createElement("div");
+    chips.className = "vchips";
+    (v.items||[]).forEach(item=>{
+      const c = document.createElement("div");
+      c.className = "chip";
+      c.textContent = item;
+      chips.appendChild(c);
+    });
+    group.appendChild(chips);
+    variantsCol.appendChild(group);
+  });
+}
+
+function syncToggles(){
+  const isLocal = state.scopeId === "local";
+  toggleLocal.setAttribute("aria-pressed", isLocal ? "true" : "false");
+  toggleGlobal.setAttribute("aria-pressed", !isLocal ? "true" : "false");
+}
+
+function renderAll(){
+  renderScopes();
+  renderMethods();
+  renderVariants();
+  setCrumbs();
+}
+
+toggleLocal.addEventListener("click", ()=>{
+  state.scopeId = "local";
+  state.methodId = null;
+  syncToggles();
+  renderAll();
+});
+toggleGlobal.addEventListener("click", ()=>{
+  state.scopeId = "global";
+  state.methodId = null;
+  syncToggles();
+  renderAll();
+});
+
+q.addEventListener("input", (e)=>{
+  state.query = e.target.value || "";
+  renderMethods();
+  renderVariants();
+  setCrumbs();
+});
+
+syncToggles();
+renderAll();
+</script>
+</body>
+</html>
