@@ -6,12 +6,14 @@
 <h3 align="center">Post-Hoc Model-Agnostic Interpretability Methods:<br>A Systematic Review and Unified Framework</h3>
 
 <p align="center">
-  <a href="https://mysticdeepai.github.io/AGNOSTIC-METHODS-FOR-INTERPRETABILITY-IN-MACHINE-LEARNING-a-systematic-review/"><img src="https://img.shields.io/badge/🌐_Project_Page-live-blue?style=for-the-badge" alt="Project Page"></a>&nbsp;
+  <a href="https://doi.org/10.5281/zenodo.19118533"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19118533-blue?style=for-the-badge&logo=doi&logoColor=white" alt="DOI"></a>&nbsp;
+  <a href="https://mysticdeepai.github.io/AMIML-SLR/"><img src="https://img.shields.io/badge/🌐_Project_Page-live-blue?style=for-the-badge" alt="Project Page"></a>&nbsp;
   <a href="data/DB.xlsx"><img src="https://img.shields.io/badge/📊_Dataset-Excel-217346?style=for-the-badge" alt="Dataset"></a>&nbsp;
   <a href="https://docs.google.com/spreadsheets/d/1eGMfH1z3LzcSONOjE0mZN7OrxXNLxSGFipiKlODofR0/edit?usp=sharing"><img src="https://img.shields.io/badge/📋_Google_Sheets-live-34A853?style=for-the-badge" alt="Google Sheets"></a>
 </p>
 
 <p align="center">
+  <a href="https://doi.org/10.5281/zenodo.19118533"><img src="https://zenodo.org/badge/811619317.svg" alt="DOI"></a>
   <img src="https://img.shields.io/badge/Studies_Reviewed-70-gold" alt="n=70">
   <img src="https://img.shields.io/badge/Application_Studies-44-teal" alt="n=44">
   <img src="https://img.shields.io/badge/PRISMA_2020-Compliant-blue" alt="PRISMA">
@@ -191,6 +193,8 @@ If you use this repository, data, or methodology in your research, please cite:
   author  = {[Authors]},
   year    = {2025},
   journal = {[Journal]},
+  doi     = {10.5281/zenodo.19118533},
+  url     = {https://doi.org/10.5281/zenodo.19118533},
   note    = {Under review}
 }
 ```

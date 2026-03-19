@@ -26,4 +26,7 @@ keywords:
   - evaluation metrics
   - PRISMA 2020
 license: MIT
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19118533"
 date-released: "2025-03-01"
