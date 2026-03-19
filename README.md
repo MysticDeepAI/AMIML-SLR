@@ -142,7 +142,7 @@ The companion website provides:
 - **Regulatory Landscape** — GDPR, EU AI Act, ISO/IEC TS 6254:2025, NIST, Latin American frameworks
 - **Corpus** — Full extraction table with column toggles, search, and domain mapping
 
-**🔗 [Access the companion website →](https://mysticdeepai.github.io/AGNOSTIC-METHODS-FOR-INTERPRETABILITY-IN-MACHINE-LEARNING-a-systematic-review/)**
+**🔗 [Access the companion website →](https://mysticdeepai.github.io/AMIML-SLR/)**
 
 ## Reproducing the Analysis
 
