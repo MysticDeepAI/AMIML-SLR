@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: >-
+  Post-Hoc Model-Agnostic Interpretability Methods: A Systematic Review
+  and Unified Framework for Technical Evolution, Bias Diagnosis, and
+  Regulatory Alignment
+message: >-
+  If you use this dataset, code, or methodology, please cite the
+  associated paper.
+type: dataset
+authors:
+  - name: "[To be updated]"
+repository-code: >-
+  https://github.com/MysticDeepAI/AGNOSTIC-METHODS-FOR-INTERPRETABILITY-IN-MACHINE-LEARNING-a-systematic-review
+url: >-
+  https://mysticdeepai.github.io/AGNOSTIC-METHODS-FOR-INTERPRETABILITY-IN-MACHINE-LEARNING-a-systematic-review/
+keywords:
+  - explainable artificial intelligence
+  - model-agnostic interpretability
+  - post-hoc explanations
+  - systematic literature review
+  - SHAP
+  - LIME
+  - counterfactual explanations
+  - causal inference
+  - ISO/IEC TS 6254:2025
+  - evaluation metrics
+  - PRISMA 2020
+license: MIT
+date-released: "2025-03-01"

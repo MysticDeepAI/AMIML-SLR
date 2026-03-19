@@ -1,0 +1,562 @@
+TY  - JOUR
+AN  - rayyan-164453689
+TI  - Explainable Deep Learning Framework for Human Activity Recognition
+Y1  - 2024
+AU  - Beigl, Yiran Huang
+AU  - Yexu Zhou
+AU  - Haibin Zhao
+AU  - Till Riedel
+AU  - Michael
+AB  - In the realm of human activity recognition (HAR), the integration of explainable Artificial Intelligence (XAI) emerges as a critical necessity to elucidate the decision-making processes of complex models, fostering transparency and trust. Traditional explanatory methods like Class Activation Mapping (CAM) and attention mechanisms, although effective in highlighting regions vital for decisions in various contexts, prove inadequate for HAR. This inadequacy stems from the inherently abstract nature of HAR data, rendering these explanations obscure. In contrast, state-of-th-art post-hoc interpretation techniques for time series can explain the model from other perspectives. However, this requires extra effort. It usually takes 10 to 20 seconds to generate an explanation. To overcome these challenges, we proposes a novel, model-agnostic framework that enhances both the interpretability and efficacy of HAR models through the strategic use of competitive data augmentation. This innovative approach does not rely on any particular model architecture, thereby broadening its applicability across various HAR models. By implementing competitive data augmentation, our framework provides intuitive and accessible explanations of model decisions, thereby significantly advancing the interpretability of HAR systems without compromising on performance.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not is post-hoc"]}
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164453694
+TI  - bLIMEy: Surrogate Prediction Explanations Beyond LIME
+Y1  - 2019
+AU  - Flach, Kacper Sokol
+AU  - Alexander Hepburn
+AU  - Raul Santos-Rodriguez
+AU  - Peter
+AB  - Surrogate explainers of black-box machine learning predictions are of paramount importance in the field of eXplainable Artificial Intelligence since they can be applied to any type of data (images, text and tabular), are model-agnostic and are post-hoc (i.e., can be retrofitted). The Local Interpretable Model-agnostic Explanations (LIME) algorithm is often mistakenly unified with a more general framework of surrogate explainers, which may lead to a belief that it is the solution to surrogate explainability. In this paper we empower the community to "build LIME yourself" (bLIMEy) by proposing a principled algorithmic framework for building custom local surrogate explainers of black-box model predictions, including LIME itself. To this end, we demonstrate how to decompose the surrogate explainers family into algorithmically independent and interoperable modules and discuss the influence of these component choices on the functional capabilities of the resulting explainer, using the example of LIME.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Excluide for year publication was 2019"]}
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164453695
+TI  - Transforming Feature Space to Interpret Machine Learning Models
+Y1  - 2021
+AU  - Brenning, Alexander
+AB  - Model-agnostic tools for interpreting machine-learning models struggle to summarize the joint effects of strongly dependent features in high-dimensional feature spaces, which play an important role in pattern recognition, for example in remote sensing of landcover. This contribution proposes a novel approach that interprets machine-learning models through the lens of feature space transformations. It can be used to enhance unconditional as well as conditional post-hoc diagnostic tools including partial dependence plots, accumulated local effects plots, or permutation feature importance assessments. While the approach can also be applied to nonlinear transformations, we focus on linear ones, including principal component analysis (PCA) and a partial orthogonalization technique. Structured PCA and diagnostics along paths offer opportunities for representing domain knowledge. The new approach is implemented in the R package `wiml`, which can be combined with existing explainable machine-learning packages. A case study on remote-sensing landcover classification with 46 features is used to demonstrate the potential of the proposed approach for model interpretation by domain experts.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Excluido por que no aporta nada novedoso, simplemente aplica metodos de interpretabildiad a datos que se han reducido en dimensionalidad, nada novedoso", "Sin embargo resalto que soluciona un poco el problema de explicación en altas dimensionalidades y variables altamente correlacionadas y su problema en tecncias como PDP o ALE"]}
+DO  - 10.1007/s10994-023-06327-8
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453745
+TI  - Path-Based Visual Explanation - Natural Language Processing and Chinese Computing: 9th CCF International Conference, NLPCC 2020, Zhengzhou, China, October 14–18, 2020, Proceedings, Part II
+Y1  - 2020
+SP  - 454–466
+AU  - Pourvali, Mohsen
+AU  - Jin, Yucheng
+AU  - Sheng, Chen
+AU  - Meng, Yao
+AU  - Wang, Lei
+AU  - Gorkovenko, Masha
+AU  - Hu, Changjian
+UR  - https://doi.org/10.1007/978-3-030-60457-8_37
+PB  - Springer-Verlag
+CY  - Berlin, Heidelberg
+KW  - Classification
+KW  - Case-based reasoning
+KW  - Explainable artificial intelligence
+AB  - The ability to explain the behavior of a Machine Learning (ML) model as a black box to people is becoming essential due to wide usage of ML applications in critical areas ranging from medicine to commerce. Case-Based Reasoning (CBR) received a special interest among other methods of providing explanations for model decisions due to the fact that it can easily be paired with a black box and then can propose a post-hoc explanation framework. In this paper, we propose a CBR-Based method to not only explain a model decision but also provide recommendations to the user in an easily understandable visual interface. Our evaluation of the method in a user study shows interesting results.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["ok", "REPITED"]}
+DO  - 10.1007/978-3-030-60457-8_37
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453746
+TI  - Multi-Objective Counterfactual Explanations - Parallel Problem Solving from Nature – PPSN XVI: 16th International Conference, PPSN 2020, Leiden, The Netherlands, September 5-9, 2020, Proceedings, Part I
+Y1  - 2020
+SP  - 448–469
+AU  - Dandl, Susanne
+AU  - Molnar, Christoph
+AU  - Binder, Martin
+AU  - Bischl, Bernd
+UR  - https://doi.org/10.1007/978-3-030-58112-1_31
+PB  - Springer-Verlag
+CY  - Berlin, Heidelberg
+KW  - NSGA-II
+KW  - Multi-objective optimization
+KW  - Counterfactual explanations
+KW  - Interpretable machine learning
+KW  - Interpretability
+AB  - Counterfactual explanations are one of the most popular methods to make predictions of black box machine learning models interpretable by providing explanations in the form of ‘what-if scenarios’. Most current approaches optimize a collapsed, weighted sum of multiple objectives, which are naturally difficult to balance a-priori. We propose the Multi-Objective Counterfactuals (MOC) method, which translates the counterfactual search into a multi-objective optimization problem. Our approach not only returns a diverse set of counterfactuals with different trade-offs between the proposed objectives, but also maintains diversity in feature space. This enables a more detailed post-hoc analysis to facilitate better understanding and also more options for actionable user responses to change the predicted outcome. Our approach is also model-agnostic and works for numerical and categorical input features. We show the usefulness of MOC in concrete cases and compare our approach with state-of-the-art methods for counterfactual explanations.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["ok", "repited"]}
+DO  - 10.1007/978-3-030-58112-1_31
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453748
+TI  - Global Explanations for Multivariate time series models - Proceedings of the 6th Joint International Conference on Data Science \&amp; Management of Data (10th ACM IKDD CODS and 28th COMAD)
+Y1  - 2023
+SP  - 149–157
+AU  - Arya, Vijay
+AU  - Saha, Diptikalyan
+AU  - Hans, Sandeep
+AU  - Rajasekharan, Amaresh
+AU  - Tang, Tony
+UR  - https://doi.org/10.1145/3570991.3570998
+PB  - Association for Computing Machinery
+CY  - New York, NY, USA
+T3  - CODS-COMAD '23
+KW  - timeseries data
+KW  - global explanations
+KW  - AI Explainability
+AB  - Several explainable AI algorithms have been proposed to help make machine learning models more interpretable and trustworthy. However in spite of numerous methodological advancements, there is still a persistent gap between what researchers develop and what business users seek. In this work, we aim to bridge this gap for an AI system that predicts the remaining useful life of an aircraft’s engine using time series data collected from multiple sensors. We propose a novel approach to compute easily understandable explanations by fusing two explainers in sequence wherein explanations of the first explainer are explained by the second. We use this approach to build a global post-hoc model-agnostic explainer for AI models that ingest multivariate time series data. Our approach fuses a local explainer that yields feature importance weights, with a directly interpretable model that outputs global rules. Our experimental results based on the C-MAPSS open-source dataset demonstrate that the proposed two-stage explainer computes global explanations that are amenable to business users and sheds light on how the behavior of an individual and a group of sensors impacts the remaining useful life of an aircraft’s engine.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not acess "]}
+DO  - 10.1145/3570991.3570998
+ER  -
+
+TY  - Book
+AN  - rayyan-164453777
+TI  - Towards Reverse-Engineering Black-Box Neural Networks - Explainable AI: Interpreting, Explaining and Visualizing Deep Learning
+Y1  - 2022
+SP  - 121–144
+AU  - Oh, Seong Joon
+AU  - Schiele, Bernt
+AU  - Fritz, Mario
+UR  - https://doi.org/10.1007/978-3-030-28954-6_7
+PB  - Springer-Verlag
+CY  - Berlin, Heidelberg
+AB  - Much progress in interpretable AI is built around scenarios where the user, one who interprets the model, has a full ownership of the model to be diagnosed. The user either owns the training data and computing resources to train an interpretable model herself or owns a full access to an already trained model to be interpreted post-hoc. In this chapter, we consider a less investigated scenario of diagnosing black-box neural networks, where the user can only send queries and read off outputs. Black-box access is a common deployment mode for many public and commercial models, since internal details, such as architecture, optimisation procedure, and training data, can be proprietary and aggravate their vulnerability to attacks like adversarial examples. We propose a method for exposing internals of black-box models and show that the method is surprisingly effective at inferring a diverse set of internal information. We further show how the exposed internals can be exploited to strengthen adversarial examples against the model. Our work starts an important discussion on the security implications of diagnosing deployed models with limited accessibility. The code is available at .
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["it is of 2019"]}
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453786
+TI  - Intrinsic Explainable Artificial Intelligence Using Trainable Spatial Weights on Numerical Weather Predictions - Proceedings of the 15th ACM International Conference on Future and Sustainable Energy Systems
+Y1  - 2024
+SP  - 551–559
+AU  - Neumann, Oliver
+AU  - Beichter, Maximilian
+AU  - Heidrich, Benedikt
+AU  - Friederich, Nils
+AU  - Hagenmeyer, Veit
+AU  - Mikut, Ralf
+UR  - https://doi.org/10.1145/3632775.3662161
+PB  - Association for Computing Machinery
+CY  - New York, NY, USA
+T3  - e-Energy '24
+KW  - deep learning
+KW  - electrical demand
+KW  - energy forecasting
+KW  - energy transition
+KW  - explainable artificial intelligence
+KW  - neural networks
+KW  - numerical weather predictions
+KW  - solar power
+KW  - wind power
+AB  - Addressing the volatility of renewable energies like solar and wind is crucial for the energy system’s stability and optimal utilization of renewable energies. Accurate energy forecasts are important to improve scheduling. Electrical demand and renewable energies are weather-dependent and Numerical Weather Predictions have proven to be beneficial for energy forecasts due to their fine-grained spatial resolution. State-of-the-art Deep Learning approaches for energy forecasting are black-box models. However, decisions in energy systems depend on energy forecasts, and, thus, it is important that models are explainable and trustworthy. Explainable Artificial Intelligence techniques exist that add explainability to energy forecasting models, but all existing methods are only post-hoc or do not use weather data on large spatial areas. This paper introduces a novel approach to forecast energy that scales and adds intrinsic explainability by design. Therefore, we use trainable spatial weights to make accurate forecasts on large spatial areas. The trained weights can be interpreted spatially to enhance explainability and increase trust. Furthermore, the spatial weights enable a wide range of future work, including postprocessing, subregion forecasting, hierarchical learning, and spatial-temporal weights.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["It is intrinsic"]}
+DO  - 10.1145/3632775.3662161
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453789
+TI  - Discriminative feature attributions: bridging post hoc explainability and inherent interpretability - Proceedings of the 37th International Conference on Neural Information Processing Systems
+Y1  - 2023
+AU  - Bhalla, Usha
+AU  - Srinivas, Suraj
+AU  - Lakkaraju, Himabindu
+PB  - Curran Associates Inc.
+CY  - Red Hook, NY, USA
+T3  - NIPS '23
+AB  - With the increased deployment of machine learning models in various real-world applications, researchers and practitioners alike have emphasized the need for explanations of model behaviour. To this end, two broad strategies have been outlined in prior literature to explain models. Post hoc explanation methods explain the behaviour of complex black-box models by identifying features critical to model predictions; however, prior work has shown that these explanations may not be faithful, in that they incorrectly attribute high importance to features that are unimportant or non-discriminative for the underlying task. Inherently interpretable models, on the other hand, circumvent these issues by explicitly encoding explanations into model architecture, meaning their explanations are naturally faithful, but they often exhibit poor predictive performance due to their limited expressive power. In this work, we identify a key reason for the lack of faithfulness of feature attributions: the lack of robustness of the underlying blackbox models, especially to the erasure of unimportant distractor features in the input. To address this issue, we propose Distractor Erasure Tuning (DiET), a method that adapts black-box models to be robust to distractor erasure, thus providing discriminative and faithful attributions. This strategy naturally combines the ease of use of post hoc explanations with the faithfulness of inherently interpretable models. We perform extensive experiments on semi-synthetic and real-world datasets, and show that DiET produces models that (1) closely approximate the original black-box models they are intended to explain, and (2) yield explanations that match approximate ground truths available by construction. Our code is made public https://github.com/AI4LIFE-GROUP/DiET.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["No es un metodo de interpretabilidad, se entrena a un modelo con base a las explicaciones"]}
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453811
+TI  - SMACE: A New Method for&nbsp;the&nbsp;Interpretability of&nbsp;Composite Decision Systems - Machine Learning and Knowledge Discovery in Databases: European Conference, ECML PKDD 2022, Grenoble, France, September 19–23, 2022, Proceedings, Part I
+Y1  - 2022
+SP  - 325–339
+AU  - Lopardo, Gianluigi
+AU  - Garreau, Damien
+AU  - Precioso, Fr\'{e}d\'{e}ric
+AU  - Ottosson, Greger
+UR  - https://doi.org/10.1007/978-3-031-26387-3_20
+PB  - Springer-Verlag
+CY  - Berlin, Heidelberg
+KW  - Interpretability
+KW  - Composite AI
+KW  - Decision-making
+AB  - Interpretability is a pressing issue for decision systems. Many post hoc methods have been proposed to explain the predictions of a single machine learning model. However, business processes and decision systems are rarely centered around a unique model. These systems combine multiple models that produce key predictions, and then apply rules to generate the final decision. To explain such decisions, we propose the Semi-Model-Agnostic Contextual Explainer (SMACE), a new interpretability method that combines a geometric approach for decision rules with existing interpretability methods for machine learning models to generate an intuitive feature ranking tailored to the end user. We show that established model-agnostic approaches produce poor results on tabular data in this setting, in particular giving the same importance to several features, whereas SMACE can rank them in a meaningful way.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Ok", "repited"]}
+DO  - 10.1007/978-3-031-26387-3_20
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453893
+TI  - Revealing Hidden Context Bias in Segmentation and Object Detection through Concept-specific Explanations - 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)
+Y1  - 2023
+Y2  - 6
+SN  - 2160-7516
+SP  - 3829-3839
+AU  - Dreyer, Maximilian
+AU  - Achtibat, Reduan
+AU  - Wiegand, Thomas
+AU  - Samek, Wojciech
+AU  - Lapuschkin, Sebastian
+KW  - Location awareness;Visualization;Image color analysis;Object detection;Dogs;Predictive models;Com...
+AB  - Applying traditional post-hoc attribution methods to segmentation or object detection predictors offers only limited insights, as the obtained feature attribution maps at input level typically resemble the models’ predicted segmentation mask or bounding box. In this work, we address the need for more informative explanations for these predictors by proposing the post-hoc eXplainable Artificial Intelligence method L-CRP to generate explanations that automatically identify and visualize relevant concepts learned, recognized and used by the model during inference as well as precisely locate them in input space. Our method therefore goes beyond singular input-level attribution maps and, as an approach based on the Concept Relevance Propagation technique, is efficiently applicable to state-of-the-art black-box architectures in segmentation and object detection, such as DeepLabV3+ and YOLOv6, among others. We verify the faithfulness of our proposed technique by quantitatively comparing different concept attribution methods, and discuss the effect on explanation complexity on popular datasets such as CityScapes, Pascal VOC and MS COCO 2017. The ability to precisely locate and communicate concepts is used to reveal and verify the use of background features, thereby highlighting possible biases of the model. Code is available on https://github.com/maxdreyer/L-CRP.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not its agnostic, it is based in LRP"]}
+DO  - 10.1109/CVPRW59228.2023.00397
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164453910
+TI  - Fuzzy Rule-Based Explainer Systems for Deep Neural Networks: From Local Explainability to Global Understanding
+Y1  - 2023
+Y2  - 9
+T2  - IEEE Transactions on Fuzzy Systems
+SN  - 1941-0034
+VL  - 31
+IS  - 9
+SP  - 3069-3080
+AU  - Aghaeipoor, Fatemeh
+AU  - Sabokrou, Mohammad
+AU  - Fernández, Alberto
+KW  - Linguistics;Computational modeling;Predictive models;Neural networks;Deep learning;Data models;El...
+AB  - Explainability of deep neural networks has been receiving increasing attention with regard to auditability and trustworthiness purposes. Of the various post-hoc explainability approaches, rule extraction methods assist to understand the logic that underpins their functioning. Whereas the rule-based solutions are directly managed and understood by practitioners, the use of intervals or crisp values in the antecedents that rely on numerical values might not be intuitive enough. In this case, the benefits of a linguistic representation based on fuzzy sets/rules are straightforward, as these semantically meaningful components ease the model understanding. This article proposes fuzzy rule-based explainer systems for deep neural networks. The algorithm learns a compact yet accurate set of fuzzy rules based on features' importance (i.e., attribution values) distilled from the trained networks. These systems can be used for both local and global explainability purposes. The evaluation results of different applications revealed that the fuzzy explainers maintained the fidelity and accuracy of the original deep neural networks while implying lower complexity and better comprehensibility.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not beaause use methods like DeepLIFT [29], integrated gradients [28], and gradient Shap, but its possible adapted, but ours focus only on the experiments not in asumtioms"]}
+DO  - 10.1109/TFUZZ.2023.3243935
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453921
+TI  - FIXC: A Method for Data Distribution Shifts Calibration via Feature Importance - 2022 IEEE 34th International Conference on Tools with Artificial Intelligence (ICTAI)
+Y1  - 2022
+Y2  - 10
+SN  - 2375-0197
+SP  - 153-160
+AU  - Zhendong, Liu
+AU  - Jiang, Wenyu
+AU  - Zhang, Yi
+AU  - Wang, Chongjun
+KW  - Training;Measurement;Perturbation methods;Pipelines;Games;Feature extraction;Data models;explaina...
+AB  - With the rapid development of Artificial Intelligence (AI), a long line of past papers have shown concerns about the data distribution shifts problem in image classification models via deep learning. Moreover, there is also an Out-of-Distribution (OOD) problem in perturbation-based explanation methods for DNNs ineXplainable Artificial Intelligence (XAI), because the generated perturbation samples may be not the same distribution as the original dataset. We explore the limitations of post-hoc Learning to Explain (L2X) explanation methods that use approximators to mimic the behavior of DNNs. We propose a training pipeline called Feature Importance eXplanation(-based) Calibration (FIXC), which efficiently extracts feature importance without using imitations of existing DNNs. We use feature importance as additional information to calibrate data distribution shifts. The evaluation of the corrupted dataset and DNNs benchmarks shows that the FIXC effectively improves the classification accuracy of corrupted images. Experiments on popular vision datasets show that the FIXC outperforms state-of-the-art methods on calibration metrics While the training pipeline provides a calibrated feature importance explanation. We also provide an analysis of our method based on game interaction theory.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Es prehoc"]}
+DO  - 10.1109/ICTAI56018.2022.00030
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453923
+TI  - Ontology-Based Post-Hoc Explanations via Simultaneous Concept Extraction* - 2022 21st IEEE International Conference on Machine Learning and Applications (ICMLA)
+Y1  - 2022
+Y2  - 12
+SP  - 887-890
+AU  - Ponomarev, Andrew
+AU  - Agafonov, Anton
+KW  - Training;Semantics;Neural networks;Training data;Machine learning;Ontologies;Computational comple...
+AB  - Ontology-based explanation techniques allow one to get explanation why a neural network arrived to some conclusion using human-understandable terms and their formal definitions. The paper proposes a method to build post-hoc ontology-based explanations by training a multi-label neural network mapping the activations of the specified "black box" network to ontology concepts. In order to simplify training of such network we employ semantic loss, taking into account relationships between concepts. The experiment with a synthetic dataset shows that the proposed method can generate accurate ontology-based explanations of a given network.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not, beacuse need de ineer activation"]}
+DO  - 10.1109/ICMLA55696.2022.00147
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164453958
+TI  - Semantic Reasoning from Model-Agnostic Explanations - 2021 IEEE 19th World Symposium on Applied Machine Intelligence and Informatics (SAMI)
+Y1  - 2021
+Y2  - 1
+SP  - 000105-000110
+AU  - Perdih, Timen Stepišnik
+AU  - Lavrač, Nada
+AU  - Škrlj, Blaž
+KW  - Analytical models;Semantics;Pipelines;Tools;Ontologies;Cognition;Libraries;model explanations;rea...
+AB  - With the wide adoption of black-box models, instance-based post hoc explanation tools, such as LIME and SHAP became increasingly popular. These tools produce explanations, pinpointing contributions of key features associated with a given prediction. However, the obtained explanations remain at the raw feature level and are not necessarily understandable by a human expert without extensive domain knowledge. We propose ReEx (Reasoning with Explanations), a method applicable to explanations generated by arbitrary instance-level explainers, such as SHAP. By using background knowledge in the form of on-tologies, ReEx generalizes instance explanations in a least general generalization-like manner. The resulting symbolic descriptions are specific for individual classes and offer generalizations based on the explainer's output. The derived semantic explanations are potentially more informative, as they describe the key attributes in the context of more general background knowledge, e.g., at the biological process level. We showcase ReEx's performance on nine biological data sets, showing that compact, semantic explanations can be obtained and are more informative than generic ontology mappings that link terms directly to feature names. ReEx is offered as a simple-to-use Python library and is compatible with tools such as SHAP and similar. To our knowledge, this is one of the first methods that directly couples semantic reasoning with contemporary model explanation methods.
+N1  - RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Ok", "repited"]}
+DO  - 10.1109/SAMI50585.2021.9378668
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454025
+TI  - Rad4XCNN: A new agnostic method for post-hoc global explanation of CNN-derived features by means of Radiomics
+Y1  - 2025
+T2  - Computer Methods and Programs in Biomedicine
+SN  - 01692607
+VL  - 260
+AU  - Prinzi, Francesco
+AU  - Militello, Carmelo
+AU  - Zarcaro, Calogero
+AU  - Bartolotta, Tommaso Vincenzo
+AU  - Gaglio, Salvatore
+AU  - Vitabile, Salvatore
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85214457898&doi=10.1016%2fj.cmpb.2024.108576&partnerID=40&md5=ccdbe0053b4faae4c6cf50df36add8e2
+LA  - English
+PB  - Elsevier Ireland Ltd
+KW  - Convolutional neural networks; Diseases; Reliability analysis; Breast Cancer; Clinical decision s...
+AB  - Background and Objective: In recent years, machine learning-based clinical decision support systems (CDSS) have played a key role in the analysis of several medical conditions. Despite their promising capabilities, the lack of transparency in AI models poses significant challenges, particularly in medical contexts where reliability is a mandatory aspect. However, it appears that explainability is inversely proportional to accuracy. For this reason, achieving transparency without compromising predictive accuracy remains a key challenge. Methods: This paper presents a novel method, namely Rad4XCNN, to enhance the predictive power of CNN-derived features with the inherent interpretability of radiomic features. Rad4XCNN diverges from conventional methods based on saliency maps, by associating intelligible meaning to CNN-derived features by means of Radiomics, offering new perspectives on explanation methods beyond visualization maps. Results: Using a breast cancer classification task as a case study, we evaluated Rad4XCNN on ultrasound imaging datasets, including an online dataset and two in-house datasets for internal and external validation. Some key results are: (i) CNN-derived features guarantee more robust accuracy when compared against ViT-derived and radiomic features; (ii) conventional visualization map methods for explanation present several pitfalls; (iii) Rad4XCNN does not sacrifice model accuracy for their explainability; (iv) Rad4XCNN provides a global explanation enabling the physician to extract global insights and findings. Conclusions: Our method can mitigate some concerns related to the explainability-accuracy trade-off. This study highlighted the importance of proposing new methods for model explanation without affecting their accuracy. © 2025 The Authors
+N1  - Cited by: 1; All Open Access, Green Open Access | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["need the deep features"]}
+DO  - 10.1016/j.cmpb.2024.108576
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454030
+TI  - Explaining neural networks without access to training data
+Y1  - 2024
+T2  - Machine Learning
+SN  - 08856125
+VL  - 113
+IS  - 6
+SP  - 3633 – 3652
+AU  - Marton, Sascha
+AU  - Lüdtke, Stefan
+AU  - Bartelt, Christian
+AU  - Tschalzev, Andrej
+AU  - Stuckenschmidt, Heiner
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85182250540&doi=10.1007%2fs10994-023-06428-4&partnerID=40&md5=cbc88cca8361bbd35a85cc6dc59ffc42
+LA  - English
+PB  - Springer
+KW  - Explainable AI (XAI); Global models; Interpretability; Learning tasks; Machine-learning; Network ...
+AB  - We consider generating explanations for neural networks in cases where the network’s training data is not accessible, for instance due to privacy or safety issues. Recently, Interpretation Nets (I-Nets) have been proposed as a sample-free approach to post-hoc, global model interpretability that does not require access to training data. They formulate interpretation as a machine learning task that maps network representations (parameters) to a representation of an interpretable function. In this paper, we extend the I-Net framework to the cases of standard and soft decision trees as surrogate models. We propose a suitable decision tree representation and design of the corresponding I-Net output layers. Furthermore, we make I-Nets applicable to real-world tasks by considering more realistic distributions when generating the I-Net’s training data. We empirically evaluate our approach against traditional global, post-hoc interpretability approaches and show that it achieves superior results when the training data is not accessible. © The Author(s) 2024.
+N1  - Cited by: 1; All Open Access, Hybrid Gold Open Access | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not beacused need de weigths to created sustitued model"]}
+DO  - 10.1007/s10994-023-06428-4
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454056
+TI  - Sparseness-Optimized Feature Importance
+Y1  - 2024
+T2  - Communications in Computer and Information Science
+SN  - 18650929
+VL  - 2154
+SP  - 393 – 415
+AU  - Grau, Isel
+AU  - Nápoles, Gonzalo
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85200681919&doi=10.1007%2f978-3-031-63797-1_20&partnerID=40&md5=a6c9717f17591867362fae9bf505bd7e
+LA  - English
+PB  - Springer Science and Business Media Deutschland GmbH
+KW  - Classification (of information); Machine learning; Classification datasets; Feature importance; I...
+AB  -  In this paper, we propose a model-agnostic post-hoc explanation procedure devoted to computing feature attribution. The proposed method, termed Sparseness-Optimized Feature Importance (SOFI), entails solving an optimization problem related to the sparseness of feature importance explanations. The intuition behind this property is that the model’s performance is severely affected after marginalizing the most important features while remaining largely unaffected after marginalizing the least important ones. Existing post-hoc feature attribution methods do not optimize this property directly but rather implement proxies to obtain this behavior. Numerical simulations using both structured (tabular) and unstructured (image) classification datasets show the superiority of our proposal compared with state-of-the-art feature attribution explanation methods. The implementation of the method is available on https://github.com/igraugar/sofi. © The Author(s), under exclusive license to Springer Nature Switzerland AG 2024.
+N1  - Cited by: 0 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["block", "discard for not access"]}
+DO  - 10.1007/978-3-031-63797-1_20
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454057
+TI  - Understanding CNN Hidden Neuron Activations using Concept Induction over Background Knowledge
+Y1  - 2024
+T2  - CEUR Workshop Proceedings
+SN  - 16130073
+VL  - 3884
+AU  - Dalal, Abhilekha
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85214803970&partnerID=40&md5=4030b60716afd991d27aa1d7c6e7630f
+LA  - English
+PB  - CEUR-WS
+KW  - Deep learning; Graph neural networks; Knowledge graph; Multilayer neural networks; Neurons; Autom...
+AB  - A major challenge in Explainable AI is interpreting hidden neuron activations accurately. These interpretations can reveal what a deep learning system perceives as relevant in the input data, thereby addressing the black-box nature of such systems. The state of the art indicates that hidden node activations can be interpretable by humans, but there’s a lack of systematic automated methods to verify these interpretations, especially those that utilize substantial background knowledge and inherently explainable methods. In this proposal, we introduce a novel model-agnostic post-hoc Explainable AI method based on a Wikipedia-derived concept hierarchy with approximately 2 million classes. Our approach utilizes OWL-reasoning-based Concept Induction for explanation generation and compares with off-the-shelf pre-trained multimodal-based explainable methods. Our results demonstrate that our method automatically provides meaningful class expressions as explanations to individual neurons in the dense layer of a Convolutional Neural Network, outperforming prior work in both quantitative and qualitative aspects. © 2024 Copyright for this paper by its authors.
+N1  - Cited by: 0 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not, because work with the hidden neuron activations not is agnostic"]}
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454059
+TI  - Explainable AI for Mixed Data Clustering
+Y1  - 2024
+T2  - Communications in Computer and Information Science
+SN  - 18650929
+VL  - 2154
+SP  - 42 – 62
+AU  - Amling, Jonas
+AU  - Scheele, Stephan
+AU  - Slany, Emanuel
+AU  - Lang, Moritz
+AU  - Schmid, Ute
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85200677648&doi=10.1007%2f978-3-031-63797-1_3&partnerID=40&md5=e43527010c7c1d5220cb818f70301717
+LA  - English
+PB  - Springer Science and Business Media Deutschland GmbH
+KW  - Clustering algorithms; Clusterings; Data clustering; Machine learning approaches; Mixed data; Mix...
+AB  - Clustering, an unsupervised machine learning approach, aims to find groups of similar instances. Mixed data clustering is of particular interest since real-life data often consists of diverse data types. The unsupervised nature of clustering emphasizes the need to understand the criteria for defining and distinguishing clusters. Current explainable AI (XAI) methods for clustering focus on intrinsically explainable clustering techniques, surrogate model-based explanations utilizing established XAI frameworks, and explanations generated from inter-instance distances. However, there exists a research gap in developing post-hoc methods that directly explain clusterings without resorting to surrogate models or requiring prior knowledge about the clustering algorithm. Addressing this gap, our work introduces a model-agnostic, entropy-based Feature Importance Score for continuous and discrete data, offering direct and comprehensible explanations by highlighting key features, deriving rules, and identifying cluster prototypes. The comparison with existing XAI frameworks like SHAP and ClAMP shows that we achieve similar fidelity and simplicity, proving that mixed data clusterings can be effectively explained solely from the distributions of the features and assigned clusters, making complex clusterings comprehensible to humans. © The Author(s), under exclusive license to Springer Nature Switzerland AG 2024.
+N1  - Cited by: 0 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["discard for not acces"]}
+DO  - 10.1007/978-3-031-63797-1_3
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454073
+TI  - Post-hoc Rule Based Explanations for Black Box Bayesian Optimization
+Y1  - 2024
+T2  - Communications in Computer and Information Science
+SN  - 18650929
+VL  - 1947
+SP  - 320 – 337
+AU  - Chakraborty, Tanmay
+AU  - Wirth, Christian
+AU  - Seifert, Christin
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85184124730&doi=10.1007%2f978-3-031-50396-2_18&partnerID=40&md5=2d67cbdaeece77199eff0c075098e6e3
+LA  - English
+PB  - Springer Science and Business Media Deutschland GmbH
+KW  - Artificial intelligence; Classification (of information); Clustering algorithms; Optimization; AI...
+AB  - Explainable Artificial Intelligence (XAI) aims to enhance transparency and trust in AI systems by providing insights into their decision-making processes. While there has been significant progress in developing explainability methods for AI, such advancements do not consider black-box optimization algorithms. In this paper, we present RX-BO (Rule based Explanations for Bayesian Optimization), a novel framework that brings explainability to black-box Bayesian optimization with a Gaussian process (GP) backbone. Leveraging the GP model’s approximation and uncertainty estimation capabilities, RX-BO extracts distribution-aware rules through a post-hoc rule based explainability method. These rules shed light on different regions of the posterior distribution, enabling transparent and trustworthy decision making. The framework incorporates a pairwise Mahalanobis distance-based hierarchical agglomerative clustering algorithm with Ward criterion for generating rule proposals. It also employs traditional metrics such as support, coverage, and confidence for selecting high-quality explanations. We evaluate RX-BO on an example optimization problem and six hyperparameter optimization tasks involving three machine learning models (classification and regression) across two datasets. The results demonstrate that RX-BO improves rule confidence and rule granularity control compared to decision trees and Rule based XAI frameworks. Furthermore, RX-BO introduces a novel approach by identifying interesting areas in the search space based on likelihood. This measure allows to rank explanations on how interesting they would be for an end user. Overall, RX-BO enhances the understanding and interpretability of black-box Bayesian optimization algorithm results, contributing to the broader field of XAI. © The Author(s), under exclusive license to Springer Nature Switzerland AG 2024.
+N1  - Cited by: 2 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Discart for not acces"]}
+DO  - 10.1007/978-3-031-50396-2_18
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454121
+TI  - Global Explanations for Multivariate time series models
+Y1  - 2023
+T2  - ACM International Conference Proceeding Series
+SP  - 149 – 157
+AU  - Arya, Vijay
+AU  - Saha, Diptikalyan
+AU  - Hans, Sandeep
+AU  - Rajasekharan, Amaresh
+AU  - Tang, Tony
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85146146741&doi=10.1145%2f3570991.3570998&partnerID=40&md5=dab0e6195633d9bbd0ff091cdd9088b1
+LA  - English
+PB  - Association for Computing Machinery
+KW  - Aircraft engines; Engines; Machine learning; AI algorithms; AI explainability; AI systems; Busine...
+AB  - Several explainable AI algorithms have been proposed to help make machine learning models more interpretable and trustworthy. However in spite of numerous methodological advancements, there is still a persistent gap between what researchers develop and what business users seek. In this work, we aim to bridge this gap for an AI system that predicts the remaining useful life of an aircraft's engine using time series data collected from multiple sensors. We propose a novel approach to compute easily understandable explanations by fusing two explainers in sequence wherein explanations of the first explainer are explained by the second. We use this approach to build a global post-hoc model-agnostic explainer for AI models that ingest multivariate time series data. Our approach fuses a local explainer that yields feature importance weights, with a directly interpretable model that outputs global rules. Our experimental results based on the C-MAPSS open-source dataset demonstrate that the proposed two-stage explainer computes global explanations that are amenable to business users and sheds light on how the behavior of an individual and a group of sensors impacts the remaining useful life of an aircraft's engine.  © 2023 ACM.
+N1  - Cited by: 2 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["not acess"]}
+DO  - 10.1145/3570991.3570998
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454127
+TI  - Dividing and Conquering a BlackBox to a Mixture of Interpretable Models: Route, Interpret, Repeat
+Y1  - 2023
+T2  - Proceedings of Machine Learning Research
+SN  - 26403498
+VL  - 202
+SP  - 11360 – 11397
+AU  - Ghosh, Shantanu
+AU  - Yu, Ke
+AU  - Arabshahi, Forough
+AU  - Batmanghelich, Kayhan
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85167706477&partnerID=40&md5=08ee7855645f42ee574312cc171cf252
+LA  - English
+PB  - ML Research Press
+KW  - Formal logic; Machine learning; Black box modelling; Black boxes; Design models; First order logi...
+AB  - ML model design either starts with an interpretable model or a Blackbox and explains it post hoc. Blackbox models are flexible but difficult to explain, while interpretable models are inherently explainable. Yet, interpretable models require extensive ML knowledge and tend to be less flexible and underperforming than their Blackbox variants. This paper aims to blur the distinction between a post hoc explanation of a Blackbox and constructing interpretable models. Beginning with a Blackbox, we iteratively carve out a mixture of interpretable experts (MoIE) and a residual network. Each interpretable model specializes in a subset of samples and explains them using First Order Logic (FOL), providing basic reasoning on concepts from the Blackbox. We route the remaining samples through a flexible residual. We repeat the method on the residual network until all the interpretable models explain the desired proportion of data. Our extensive experiments show that our route, interpret, and repeat approach (1) identifies a diverse set of instance-specific concepts with high concept completeness via MoIE without compromising in performance, (2) identifies the relatively ªharderºsamples to explain via residuals, (3) outperforms the interpretable by-design models by significant margins during test-time interventions, and (4) fixes the shortcut learned by the original Blackbox. The code for MoIE is publicly available at: https://github.com/batmanlab/ICML-2023-Route-interpret-repeat. © 2023 Proceedings of Machine Learning Research. All rights reserved.
+N1  - Cited by: 5 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["not is agnostic"]}
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454139
+TI  - ES-Mask: Evolutionary Strip Mask for Explaining Time Series Prediction
+Y1  - 2023
+T2  - Proceedings of the 37th AAAI Conference on Artificial Intelligence, AAAI 2023
+VL  - 37
+SP  - 16342 – 16343
+AU  - Sun, Yifei
+AU  - Song, Cheng
+AU  - Lu, Feng
+AU  - Li, Wei
+AU  - Jin, Hai
+AU  - Zomaya, Albert Y.
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85168246027&doi=10.1609%2faaai.v37i13.27031&partnerID=40&md5=1cd9c215cc4fd453f89acb6aabac93e7
+LA  - English
+PB  - AAAI Press
+KW  - Artificial intelligence; Forecasting; Internal models; Machine learning models; Mask design; Mode...
+AB  - Machine learning models are increasingly used in time series prediction with promising results. The model explanation of time series prediction falls behind the model development and makes less sense to users in understanding model decisions. This paper proposes ES-Mask, a post-hoc and model-agnostic evolutionary strip mask-based saliency approach for time series applications. ES-Mask designs the mask consisting of strips with the same salient value in consecutive time steps to produce binary and sustained feature importance scores over time for easy understanding and interpretation of time series. ES-Mask uses an evolutionary algorithm to search for the optimal mask by manipulating strips in rounds, thus is agnostic to models by involving no internal model states in the search. The initial experiments on MIMIC-III data set show that ES-Mask outperforms state-of-the-art methods. Copyright © 2023, Association for the Advancement of Artificial Intelligence (www.aaai.org). All rights reserved.
+N1  - Cited by: 1; All Open Access, Gold Open Access | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not have a completed paper is ole a summary studen"]}
+DO  - 10.1609/aaai.v37i13.27031
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454186
+TI  - Exploring Root Causes of CNN-Based Image Classifier Failures Using 3-Nearest Neighbors
+Y1  - 2022
+T2  - SN Computer Science
+SN  - 2662995X
+VL  - 3
+IS  - 6
+AU  - Bilgin, Zeki
+AU  - Gunestas, Murat
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85137010385&doi=10.1007%2fs42979-022-01360-1&partnerID=40&md5=10d398a84126210df9a434d8230118be
+LA  - English
+PB  - Springer
+AB  - The black-box characteristics of deep learning models make it imperative to explain decision-making mechanisms of these models in a way that humans can understand or interpret. This requirement has become more important as artificial intelligence-based applications take increasingly more critical roles in our lives. To this end, we, in this study, develop a model-agnostic post-hoc explanation method that brings explanations such as underfitting, overfitting, or outlier particularly about the possible root cause of inaccurate decisions produced by convolutional neural network (CNN) based image classification models. Our approach relies on analysis of the model’s response to the k-nearest neighbors in training dataset of the mispredicted test instance. To find visually and semantically similar images in the process of extracting k-nearest neighbors, we measure the distance between the features extracted from internal layers of the model. For the experimental analysis, we first build several underfitted, overfitted and well-fitted CNN models for MNIST and CIFAR-10 datasets. Then, for each different model, we identify the mispredicted test samples in these datasets, and extract their 3-nearest neighbors from the related training sets. We feed the extracted 3-nearest neighbors into the associated model and perform both sample-based and statistical post-hoc explanation for the inaccurately predicted test samples based on the models’ responses to the 3-nearest neighbors. © 2022, The Author(s), under exclusive licence to Springer Nature Singapore Pte Ltd.
+N1  - Cited by: 2 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Not is 100% agnostic,  need the last vector of activavion"]}
+DO  - 10.1007/s42979-022-01360-1
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454195
+TI  - Interpreting deep learning models with marginal attribution by conditioning on quantiles
+Y1  - 2022
+T2  - Data Mining and Knowledge Discovery
+SN  - 13845810
+VL  - 36
+IS  - 4
+SP  - 1335 – 1370
+AU  - Merz, Michael
+AU  - Richman, Ronald
+AU  - Tsanakas, Andreas
+AU  - Wüthrich, Mario V.
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85132153056&doi=10.1007%2fs10618-022-00841-4&partnerID=40&md5=07f7dcd1620b8e24beace02c1ddfb543
+LA  - English
+PB  - Springer
+KW  - Deep learning; Learning systems; Accumulated local effect; Attribution; Deep learning; Explainabl...
+AB  - A vast and growing literature on explaining deep learning models has emerged. This paper contributes to that literature by introducing a global gradient-based model-agnostic method, which we call Marginal Attribution by Conditioning on Quantiles (MACQ). Our approach is based on analyzing the marginal attribution of predictions (outputs) to individual features (inputs). Specifically, we consider variable importance by fixing (global) output levels, and explaining how features marginally contribute to these fixed global output levels. MACQ can be seen as a marginal attribution counterpart to approaches such as accumulated local effects, which study the sensitivities of outputs by perturbing inputs. Furthermore, MACQ allows us to separate marginal attribution of individual features from interaction effects and to visualize the 3-way relationship between marginal attribution, output level, and feature value. © 2022, The Author(s).
+N1  - Cited by: 7; All Open Access, Green Open Access, Hybrid Gold Open Access | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["Necesita infomración del gradiente y aplica derivadas de disntintos ordenes"]}
+DO  - 10.1007/s10618-022-00841-4
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454208
+TI  - ReLAX: Reinforcement Learning Agent Explainer for Arbitrary Predictive Models
+Y1  - 2022
+T2  - International Conference on Information and Knowledge Management, Proceedings
+SP  - 252 – 261
+AU  - Chen, Ziheng
+AU  - Silvestri, Fabrizio
+AU  - Wang, Jia
+AU  - Zhu, He
+AU  - Ahn, Hongshik
+AU  - Tolomei, Gabriele
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85140830775&doi=10.1145%2f3511808.3557429&partnerID=40&md5=aa890074263374ad896f234b3845b83c
+LA  - English
+PB  - Association for Computing Machinery
+KW  - Classification (of information); Decision making; Deep learning; Large dataset; Learning systems;...
+AB  - Counterfactual examples (CFs) are one of the most popular methods for attaching post-hoc explanations to machine learning (ML) models. However, existing CF generation methods either exploit the internals of specific models or depend on each sample's neighborhood, thus they are hard to generalize for complex models and inefficient for large datasets. This work aims to overcome these limitations and introduces ReLAX, a model-agnostic algorithm to generate optimal counterfactual explanations. Specifically, we formulate the problem of crafting CFs as a sequential decision-making task and then find the optimal CFs via deep reinforcement learning (DRL) with discrete-continuous hybrid action space. Extensive experiments conducted on several tabular datasets have shown that ReLAX outperforms existing CF generation baselines, as it produces sparser counterfactuals, is more scalable to complex target models to explain, and generalizes to both classification and regression tasks. Finally, to demonstrate the usefulness of our method in a real-world use case, we leverage CFs generated by ReLAX to suggest actions that a country should take to reduce the risk of mortality due to COVID-19. Interestingly enough, the actions recommended by our method correspond to the strategies that many countries have actually implemented to counter the COVID-19 pandemic. © 2022 ACM.
+N1  - Cited by: 20; All Open Access, Green Open Access | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"}
+DO  - 10.1145/3511808.3557429
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454209
+TI  - Introducing Quest: A Query-Driven Framework to Explain Classification Models on Tabular Data
+Y1  - 2022
+T2  - Proceedings of the Workshop on Human-In-the-Loop Data Analytics, HILDA 2022
+AU  - Geisler, Nadja
+AU  - Binnig, Carsten
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85137580990&doi=10.1145%2f3546930.3547497&partnerID=40&md5=72ad65195571f540e9f26c60ea39f0a2
+LA  - English
+PB  - Association for Computing Machinery, Inc
+KW  - Classification models; Data sample; Explainable AI; Image data; Input datas; Interpretability; Lo...
+AB  - Machine learning models are everywhere now; but only few of them are transparent in how they work. To remedy this, local explanations aim to show users how and why learned models produce a certain output for a given input (data sample). However, most existing approaches for are oriented around images or text data and, thus, cannot leverage the structure and properties of tabular data. Therefore, we present Quest, a new framework for generating explanations that are a better fit for tabular data. The main idea is to create explanations in the form of relational predicates (called queries hereafter) that approximate the behavior of a classifier around the given sample. In an initial evaluation, we show anecdotally how Quest can be used on a tabular data set compared to existing approaches that can be applied on tabular data.  © 2022 ACM.
+N1  - Cited by: 0 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["It is impossible acces of the paper but i think that is really important paper "]}
+DO  - 10.1145/3546930.3547497
+ER  -
+
+TY  - Conference Article
+AN  - rayyan-164454226
+TI  - Change Detection for Local Explainability in Evolving Data Streams
+Y1  - 2022
+T2  - International Conference on Information and Knowledge Management, Proceedings
+SP  - 706 – 716
+AU  - Haug, Johannes
+AU  - Braun, Alexander
+AU  - Zürn, Stefan
+AU  - Kasneci, Gjergji
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85140844394&doi=10.1145%2f3511808.3557257&partnerID=40&md5=7a3a335f5d5258b71fdcf833b76638b9
+LA  - English
+PB  - Association for Computing Machinery
+KW  - E-learning; Feature extraction; Learning systems; Concept drift detection; Concept drifts; Data s...
+AB  - As complex machine learning models are increasingly used in sensitive applications like banking, trading or credit scoring, there is a growing demand for reliable explanation mechanisms. Local feature attribution methods have become a popular technique for post-hoc and model-agnostic explanations. However, attribution methods typically assume a stationary environment in which the predictive model has been trained and remains stable. As a result, it is often unclear how local attributions behave in realistic, constantly evolving settings such as streaming and online applications. In this paper, we discuss the impact of temporal change on local feature attributions. In particular, we show that local attributions can become obsolete each time the predictive model is updated or concept drift alters the data generating distribution. Consequently, local feature attributions in data streams provide high explanatory power only when combined with a mechanism that allows us to detect and respond to local changes over time. To this end, we present CDLEEDS, a flexible and model-agnostic framework for detecting local change and concept drift. CDLEEDS serves as an intuitive extension of attribution-based explanation techniques to identify outdated local attributions and enable more targeted recalculations. In experiments, we also show that the proposed framework can reliably detect both local and global concept drift. Accordingly, our work contributes to a more meaningful and robust explainability in online machine learning. © 2022 ACM.
+N1  - Cited by: 6; All Open Access, Green Open Access | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["it is impossible to accces "]}
+DO  - 10.1145/3511808.3557257
+ER  -
+
+TY  - JOUR
+AN  - rayyan-164454258
+TI  - Selecting Informative Features for Post-hoc Community Explanation
+Y1  - 2022
+T2  - Studies in Computational Intelligence
+SN  - 1860949X
+VL  - 1015
+SP  - 297 – 308
+AU  - Sadler, Sophie
+AU  - Greene, Derek
+AU  - Archambault, Daniel
+UR  - https://scopus.unalproxy.elogim.com/inward/record.uri?eid=2-s2.0-85122513459&doi=10.1007%2f978-3-030-93409-5_25&partnerID=40&md5=f23478fa46c9bc47c7dc917c2393c2b0
+LA  - English
+PB  - Springer Science and Business Media Deutschland GmbH
+AB  - Community finding algorithms are complex, often stochastic algorithms used to detect highly-connected groups of nodes in a graph. As with “black-box” machine learning models, these algorithms typically provide little in the way of explanation or insight into their outputs. In this research paper, inspired by recent work in explainable artificial intelligence (XAI), we look to develop post-hoc explanations for community finding, which are agnostic of the choice of algorithm. Specifically, we propose a new approach to identify features that indicate whether a set of nodes comprises a coherent community or not. We evaluate our methodology, which selects interpretable features from a longlist of candidates, in the context of three well-known community finding algorithms. © 2022, The Author(s), under exclusive license to Springer Nature Switzerland AG.
+N1  - Cited by: 2 | RAYYAN-INCLUSION: {"Gilber Alexis Corrales Gallego"=>"Maybe"} | USER-NOTES: {"Gilber Alexis Corrales Gallego"=>["repited"]}
+DO  - 10.1007/978-3-030-93409-5_25
+ER  -
+
